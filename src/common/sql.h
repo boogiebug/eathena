@@ -14,7 +14,10 @@
 #define SQL_SUCCESS 0
 #define SQL_NO_DATA 100
 
-
+// fix new mysql lib already eliminate my_bool type
+#ifndef my_bool
+#define my_bool int
+#endif
 
 /// Data type identifier.
 /// String, enum and blob data types need the buffer length specified.
